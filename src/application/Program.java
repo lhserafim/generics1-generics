@@ -14,7 +14,7 @@ public class Program {
 
         for (int i = 1; i <= n ; i++) {
             int value = sc.nextInt();
-            ps.addValue();
+            ps.addValue(value);
         }
 
         ps.print();
