@@ -1,0 +1,25 @@
+package application;
+
+import services.PrintService;
+
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        PrintService ps = new PrintService();
+
+        System.out.print("How many values? ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n ; i++) {
+            int value = sc.nextInt();
+            ps.addValue();
+        }
+
+        ps.print();
+
+        System.out.println("First: " + ps.first());
+        sc.close();
+    }
+}
