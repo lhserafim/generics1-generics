@@ -3,15 +3,20 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
-    // Criar lista usando um tipo genérico
-    List<Integer> list = new ArrayList<>();
+// Para que eu possa adicionar qualquer tipo de elemento a minha lista: "int, double, string, etc"
+// implementar a classe como genérica <T>
+// O <T> é um alias, poderia ser outra letra ou palavra ex. <TYPE>
 
-    public void addValue(Integer value) {
+public class PrintService<T> {
+    // Criar lista usando um tipo genérico
+    //List<Integer> list = new ArrayList<>();
+    List<T> list = new ArrayList<>();
+
+    public void addValue(T value) {
         list.add(value); //adicionando elementos a lista
     }
 
-    public Object first() {
+    public T first() {
         if (list.isEmpty()) {
             throw new IllegalStateException("List is empty");
         }
